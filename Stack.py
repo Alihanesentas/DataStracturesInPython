@@ -22,3 +22,41 @@ print(stack.pop())
 
 print('\n Stack after elements are popped \n')
 print(stack)
+
+# Implamantation using collections.deque
+from collections import deque
+stack = deque()
+stack.append('g')
+stack.append('f')
+stack.append('g')
+print('Initial stack: ')
+print(stack)
+
+
+# pop() function to pop
+# element from stack in
+# LIFO order
+print('\n Elements popped from stack: ')
+print(stack.pop())
+print(stack.pop())
+print(stack.pop())
+
+print('\n Stack after elements are popped' )
+print(stack)
+
+# Implementation using queue module
+from queue import LifoQueue
+stack = LifoQueue(maxsize =3 )
+print(stack.qsize())
+stack.put('g')
+stack.put('f')
+stack.put('g')
+
+print("Full ", stack.full()) 
+print("Size ", stack.qsize()) 
+
+print('\n Elements poppped from the stack')
+print(stack.get())
+print(stack.get())
+print(stack.get())
+print("\n Empty ", stack.empty())
