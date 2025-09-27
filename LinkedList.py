@@ -109,7 +109,13 @@ class LinkedList:
         secondLast.next = None
         return self.head
     
-
+    def searchKey(self,key):
+        curr = self.head
+        while curr is not None:
+          if curr.data ==key:
+              return True
+          curr = curr.next
+        return False
     
 
 
@@ -174,5 +180,7 @@ if __name__ == '__main__':
     list.insertAtLast(14)
     list.deleteHead()
     list.deletePos(3)
-    list.deleteLast()
+    list.deleteLast(
+    )
+    print(list.searchKey(3))
     list.printList()
