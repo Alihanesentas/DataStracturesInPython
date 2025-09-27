@@ -1,0 +1,10 @@
+import collections
+de = collections.deque([1,2,3])
+de.append(4)
+print(de)
+de.appendleft(6)
+print(de)
+de.pop()
+print(de)
+de.popleft()
+print(de)
